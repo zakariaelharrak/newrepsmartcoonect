@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="Arabic">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kufi&display=swap">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+  body {
+    background-color: black;
+    color: white;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    text-align: center;
+    color: orange;
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Add this line */
+  }
+  .form-group {
+    text-align: end;
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input,
+  .form-group textarea {
+    text-align: end;
+
+    width: calc(100% - 20px); /* Adjusted width to account for padding */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .form-group button {
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+  }
+  img {
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="https://bc7a6265f8.imgdist.com/pub/bfra/d6boplg9/l57/ye7/y68/ssssss.png" alt="Image">
+    <h1>مرحبا بيك عدي نتوسلو معاك فاقرب وقت ممكن</h1>
+</div>
+
+<script>
+    function redirectToAnotherPage(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+  
+      // Redirect the user to another page
+      window.location.href = "Welcomepage.html";
+    }
+  </script>
+
+</body>
+</html>

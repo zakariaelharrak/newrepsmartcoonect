@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartConnect - Coming Soon</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: orange;
+            text-align: center;
+            font: 1em sans-serif;
+        }
+
+        #coming-soon {
+            padding: 16px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>SmartConnect</h1>
+    <br><br>
+    <div id="coming-soon"><h2>| Coming Soon</h2></div>
+       <br><br>
+
+    <form action="https://api.web3forms.com/submit" method="POST" onsubmit="redirectToWelcome(event)">
+
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="apikey" value="c3b662b0-aff1-404d-8d4d-328c255d03d7">
+    
+        <!-- Form Inputs. Each input must have a name="" attribute -->
+        <input type="text" name="name" required>
+        <input type="email" name="email" required>
+        <textarea name="message" required></textarea>
+    
+        <button type="submit">Submit Form</button>
+    
+    </form>
+    <!-- Required for hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script>
+        function redirectToWelcome(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+    
+            // Send the form data asynchronously
+            var form = event.target;
+            var formData = new FormData(form);
+    
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                // Check if the form submission was successful
+                if (response.ok) {
+                    // Redirect to welcome.html after successful submission
+                    window.location.href = "welcome.html";
+                } else {
+                    // Handle errors if needed
+                    console.error('Form submission failed:', response.statusText);
+                }
+            })
+            .catch(error => {
+                // Handle network errors
+                console.error('Error submitting form:', error);
+            });
+        }
+    </script>
+    
+
+
+</body>
+</html>
